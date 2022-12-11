@@ -23,10 +23,10 @@
     <ctl name="TERT_TDM_RX_0 Audio Mixer MultiMedia15" value="0" />
     <ctl name="TERT_TDM_RX_0 Audio Mixer MultiMedia16" value="0" />
     <ctl name="TERT_TDM_RX_0_Voice Mixer Voip" value="0" />
-    <ctl name="ADC1 Volume" value="6" />
-    <ctl name="ADC2 Volume" value="6" />
-    <ctl name="ADC3 Volume" value="6" />
-    <ctl name="ADC4 Volume" value="6" />
+    <ctl name="ADC1 Volume" value="8" />
+    <ctl name="ADC2 Volume" value="8" />
+    <ctl name="ADC3 Volume" value="8" />
+    <ctl name="ADC4 Volume" value="8" />
     <ctl name="TERT_TDM_RX_0 Channels" value="Two" />
     <ctl name="TERT_TDM_RX_0 Format" value="S24_LE" />
     <ctl name="TERT_TDM_RX_0 SampleRate" value="KHZ_96" />
@@ -76,8 +76,6 @@
     <ctl name="RCV Fast Use Case Switch Enable" value="1"/>
     <ctl name="RCV Boost Class-H Tracking Enable" value="1" />
     <ctl name="RCV Boost Target Voltage" value="0" />
-    <ctl name="Class-H Head Room" value="11" />
-    <ctl name="RCV Class-H Head Room" value="11" />
     <!-- smart PA end -->
     <ctl name="COMP1 Switch" value="0" />
     <ctl name="COMP2 Switch" value="0" />
@@ -939,14 +937,10 @@
 
     <path name="voice-speaker">
         <path name="speaker" />
-        <ctl name="AMP PCM Gain" value="14" />
-        <ctl name="RCV AMP PCM Gain" value="14" />
     </path>
 
     <path name="voice-speaker-stereo">
         <path name="speaker" />
-        <ctl name="Class-H Head Room" value="50" />
-        <ctl name="RCV Class-H Head Room" value="50" />
         <ctl name="Fast Use Case Delta File" value="spk1_voice_delta.txt"/>
         <ctl name="RCV Fast Use Case Delta File" value="spk2_voice_delta.txt"/>
     </path>
@@ -969,12 +963,12 @@
         <ctl name="RCV ASPRX2 Slot Position" value="2" />
         <ctl name="RCV ASPTX Ref" value="Ref" />
         <ctl name="RCV PCM Source" value="DSP" />
-        <ctl name="RCV AMP PCM Gain" value="0" />
+        <ctl name="RCV AMP PCM Gain" value="3" />
         <ctl name="Cirrus SP Usecase Config" value="None" />
         <ctl name="RCV Fast Use Case Delta File" value="rcv_voice_delta.txt"/>
         <ctl name="RCV Boost Class-H Tracking Enable" value="0" />
         <ctl name="RCV Boost Target Voltage" value="50" />
-       <ctl name="Mi_Ultrasound Rx Device" value="0"/>
+        <ctl name="Mi_Ultrasound Rx Device" value="0"/>
     </path>
 
     <path name="handset-mic">
@@ -990,6 +984,16 @@
         <ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
         <ctl name="ADC4 MUX" value="INP5" />
         <ctl name="ADC4 Volume" value="6" />
+    </path>
+
+    <path name="voice-rec-mic">
+        <ctl name="TX DEC0 MUX" value="SWR_MIC"/>
+        <ctl name="TX SMIC MUX0" value="ADC0" />
+        <ctl name="TX_CDC_DMA_TX_3 Channels" value="One" />
+        <ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
+        <ctl name="ADC1_MIXER Switch" value="1" />
+        <ctl name="ADC1 Volume" value="8" />
+        <ctl name="TX_DEC0 Volume" value="88" />
     </path>
 
     <path name="speaker-mic">
@@ -1008,13 +1012,13 @@
         <ctl name="TX SMIC MUX0" value="ADC0" />
         <ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
         <ctl name="ADC1_MIXER Switch" value="1" />
-        <ctl name="ADC1 Volume" value="6" />
+        <ctl name="ADC1 Volume" value="8" />
         <ctl name="TX DEC1 MUX" value="SWR_MIC"/>
         <ctl name="TX SMIC MUX1" value="ADC3" />
         <ctl name="ADC4_MIXER Switch" value="1" />
         <ctl name="TX_AIF1_CAP Mixer DEC1" value="1" />
         <ctl name="ADC4 MUX" value="INP5" />
-        <ctl name="ADC4 Volume" value="6" />
+        <ctl name="ADC4 Volume" value="8" />
     </path>
 
     <path name="speaker-dmic-endfire">
@@ -1030,16 +1034,6 @@
         <ctl name="TX_AIF1_CAP Mixer DEC1" value="1" />
         <ctl name="ADC4 MUX" value="INP5" />
         <ctl name="ADC4 Volume" value="6" />
-    </path>
-
-    <path name="voice-rec-mic">
-        <ctl name="TX DEC0 MUX" value="SWR_MIC"/>
-        <ctl name="TX SMIC MUX0" value="ADC0" />
-        <ctl name="TX_CDC_DMA_TX_3 Channels" value="One" />
-        <ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
-        <ctl name="ADC1_MIXER Switch" value="1" />
-        <ctl name="ADC1 Volume" value="12" />
-        <ctl name="TX_DEC0 Volume" value="87" />
     </path>
 
     <path name="voice-headphones">
