@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_apollo.mk
+    $(LOCAL_DIR)/lineage_apollo.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_apollo-user \
-    aosp_apollo-userdebug \
-    aosp_apollo-eng
+    lineage_apollo-user \
+    lineage_apollo-userdebug \
+    lineage_apollo-eng

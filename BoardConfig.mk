@@ -1,4 +1,4 @@
-\#
+#
 # Copyright (C) 2021 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -19,9 +19,9 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_apollo
 TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_apollo
 
 # Kernel
-TARGET_KERNEL_CONFIG := vendor/apollo_defconfig
-TARGET_KERNEL_BUILD_HOST := AGMAD-Machine
-TARGET_KERNEL_BUILD_USER := "AhmedTohamy"
+TARGET_KERNEL_CONFIG := apollo_defconfig
+TARGET_KERNEL_BUILD_HOST := Ozan-Machine
+TARGET_KERNEL_BUILD_USER := "realizeyes"
 
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := apollo,apollo,apollopro
