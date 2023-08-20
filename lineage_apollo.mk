@@ -12,21 +12,27 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common VoidUI stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Inherit Miui Camera
+$(call inherit-product-if-exists, vendor/xiaomi/apollo-miuicamera/products/miuicamera.mk)
+
+# Disable EPPE
+TARGET_DISABLE_EPPE := true
+
+# Device config
+TARGET_HAS_UDFPS := false
+TARGET_ENABLE_BLUR := true
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # GAPPS
-WITH_GAPPS := false
-TARGET_INCLUDE_GOOGLE_APP := false
-TARGET_INCLUDE_GOOGLE_CALCULATOR := true
-TARGET_INCLUDE_GOOGLE_CALENDAR := false
-TARGET_INCLUDE_GOOGLE_CHROME := false
-TARGET_INCLUDE_GOOGLE_DESKCLOCK := true
-TARGET_INCLUDE_GOOGLE_DRIVE := false
-TARGET_INCLUDE_GMAIL := true
-TARGET_INCLUDE_GOOGLE_MAPS := true
-TARGET_INCLUDE_GOOGLE_PHOTOS := true
-# (NOT YET) TARGET_INCLUDE_GOOGLE_SETUP := false
-TARGET_INCLUDE_PIXEL_FRAMEWORK := true
-TARGET_OPTOUT_GOOGLE_TELEPHONY := false
-TARGET_USE_GOOGLE_TELEPHONY := false
+WITH_GAPPS := true
+TARGET_INCLUDE_GOOGLE_TELEPHONY := false
+TARGET_INCLUDE_PIXEL_FRAMEWORK := false
+TARGET_INCLUDE_GOOGLE_CAMERA := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_SUPPORTS_QUICK_TAP := false
+TARGET_INCLUDE_GMAIL := false
+TARGET_INCLUDE_GOOGLE_MAPS := false
 
 # Alpha internal properties
 TARGET_ENABLE_BLUR := true

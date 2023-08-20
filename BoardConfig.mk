@@ -21,10 +21,13 @@ TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_apollo
 # Kernel
 TARGET_KERNEL_CONFIG := vendor/apollo_defconfig
 TARGET_KERNEL_BUILD_HOST := Ozan-Machine
-TARGET_KERNEL_BUILD_USER := "OzanKaya"
+TARGET_KERNEL_BUILD_USER := "realizeyes"
 
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := apollo,apollo,apollopro
+
+# Camera
+TARGET_INCLUDES_MIUI_CAMERA := true
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop

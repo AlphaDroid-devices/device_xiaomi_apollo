@@ -24,6 +24,14 @@ PRODUCT_PACKAGES += \
     libMegviiFacepp-0.5.2 \
     libmegface
 
+# Camera Extensions
+PRODUCT_SYSTEM_PROPERTIES += \
+		ro.camerax.extensions.enabled=true
+
+# Camera Extensions permissions
+PRODUCT_COPY_FILES += \
+		    $(LOCAL_PATH)/permissions/camerax-vendor-extensions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/camerax-vendor-extensions.xml
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
